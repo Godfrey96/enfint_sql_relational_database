@@ -32,11 +32,11 @@ VALUES
 INSERT INTO course
 (course_id, course_name, language, level, course_length_weeks, start_date, in_school, teacher, client)
 VALUES
-(1, "English", "Eng", "05", 4, "15-Aug-21", 1, 2, 3),
-(2, "Physics", "Phy", "03", 10, "01-May-19", 2, 1, 4),
-(3, "Business", "Bsm", "01", 5, "25-Jun-20", 2, 4, 3),
-(4, "Accounting", "Acc", "02", 8, "05-Jan-22", 3, 3, 2),
-(5, "Stats", "Sts", "04", 12, "05-Apr-20", 4, 2, 1)
+(1, "English", "Eng", "5", 4, "15-Aug-21", 1, 2, 3),
+(2, "Physics", "Phy", "3", 10, "01-May-19", 2, 1, 4),
+(3, "Business", "Bsm", "4", 5, "25-Jun-20", 2, 4, 3),
+(4, "Accounting", "Acc", "2", 8, "05-Jan-22", 3, 3, 2),
+(5, "Stats", "Sts", "4", 12, "05-Apr-20", 4, 2, 1)
 
 --insert values into takes_course
 INSERT INTO takes_course

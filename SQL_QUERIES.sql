@@ -24,7 +24,8 @@ FROM course;
 
 -- e
 select MIN(course_length_weeks)
-FROM course;
+FROM course
+WHERE level = 4;
 
 --f
 SELECT p.participant_id, p.first_name, p.last_name, p.phone_no, c.client_id, c.client_name
@@ -39,11 +40,12 @@ INNER JOIN teacher ON course.teacher = teacher.teacher_id
 WHERE course_id = 4;
 
 -- h
-SELECT participant.first_name, participant.last_name, course_name, teacher.first_name, teacher.last_name
+SELECT participant.first_name As participant_first_name, participant.last_name As participant_last_name, course_name, teacher.first_name As teacher_first_name, teacher.last_name As teacher_last_name
 FROM course
-INNER JOIN participant ON course.course_id = participant.participant_id
+INNER join takes_course ON course.course_id = takes_course.course_id
+INNER JOIN participant ON takes_course.participant_id = participant.participant_id
 INNER JOIN teacher ON course.teacher = teacher.teacher_id
-WHERE course_id = 2;
+WHERE course.course_id = 2;
 
 
 
