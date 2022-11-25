@@ -19,13 +19,13 @@ SELECT COUNT(*)
 from participant;
 
 -- d
-select MAX(course_length_weeks)
+SELECT MAX(course_length_weeks)
 FROM course;
 
 -- e
-select MIN(course_length_weeks)
+SELECT MIN(course_length_weeks) As min, level
 FROM course
-WHERE level = 4;
+GROUP BY level;
 
 --f
 SELECT p.participant_id, p.first_name, p.last_name, p.phone_no, c.client_id, c.client_name
@@ -46,9 +46,6 @@ INNER join takes_course ON course.course_id = takes_course.course_id
 INNER JOIN participant ON takes_course.participant_id = participant.participant_id
 INNER JOIN teacher ON course.teacher = teacher.teacher_id
 WHERE course.course_id = 2;
-
-
-
 
 
 
